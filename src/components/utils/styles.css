@@ -11,18 +11,23 @@ body {
 
 /* Sidebar styles */
 
-.sidebar {
+.sidebar_content {
+  padding: 20px;
   width: 250px;
-  min-height: calc(100vh - 45px);
   left: 0px;
   bottom: 0px;
+  min-height: calc(100vh - 110px);
   top: 0px;
   z-index: 100;
   background-color: rgb(109, 106, 124);
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.sidebar {
+  min-height: calc(100vh - 45px);
 }
 
 .s-navbar {
@@ -78,7 +83,7 @@ body {
 }
 
 .bottom-space {
-  height: 50px;
+  height: 70px;
   background-color: rgb(224, 230, 230);
 }
 

@@ -5,8 +5,11 @@ const Sidebar = (props) => {
   return (
     <div className="container">
       <div className="sidebar">
-        <SidebarTop />
-        <SidebarBottom />
+        <div className="sidebar_content">
+          <SidebarTop />
+          <SidebarBottom />
+        </div>
+        <div className="bottom-space"></div>
       </div>
       <div className="content">{props.children}</div>
     </div>

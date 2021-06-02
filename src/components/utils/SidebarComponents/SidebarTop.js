@@ -13,7 +13,7 @@ const SidebarTop = () => {
     "/agri-purchase-management",
     "/agri-input-master-maintenance",
     "/supplier-master-maintenance",
-    "/agri-input-purchase-request",
+    "/",
   ];
 
   return (

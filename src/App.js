@@ -19,7 +19,7 @@ function App() {
     "/agri-purchase-management",
     "/agri-input-master-maintenance",
     "/supplier-master-maintenance",
-    "/agri-input-purchase-request",
+    "/",
     "/tax-master-maintenance",
   ];
 
