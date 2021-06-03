@@ -12,7 +12,6 @@ const ShowCurrentTable = ({ index }) => {
           <th>Product Image</th>
           <th>Product Description</th>
           <th>Order Quantity</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
 import ShowModal from "./ShowModal";
 
 const ShowRow = ({ idx, item }) => {
@@ -11,17 +10,25 @@ const ShowRow = ({ idx, item }) => {
 
   return (
     <tr key={idx}>
-      <td>{idx + 1}</td>
+      <td style={{ width: "70px", textAlign: "center" }}>{idx + 1}.</td>
       <td>{item.category}</td>
       <td style={{ textAlign: "center" }}>
         <img src={item.img} alt="Prod img" />
       </td>
       <td>{item.desc}</td>
       <td style={{ textAlign: "center" }}>{item.quantity}</td>
-      <td>
-        <Button className="table_button" onClick={openModal}>
-          <i className="fa fa-external-link"></i>
-        </Button>
+      <td
+        style={{
+          backgroundColor: "white",
+          border: "none",
+          fontWeight: "bold",
+        }}
+      >
+        <i
+          className="fa fa-external-link"
+          onClick={openModal}
+          style={{ cursor: "pointer" }}
+        ></i>
         <ShowModal closeModal={closeModal} isOpen={isOpen} item={item} />
       </td>
     </tr>

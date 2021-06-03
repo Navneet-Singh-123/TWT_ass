@@ -24,7 +24,12 @@ const ShowItem = ({ item, index }) => {
 
   const showCol1 = () => (
     <div className="order_ind_1" onClick={handleClick}>
-      <input type="radio" onChange={handleCheckChange} checked={showTable} />
+      <input
+        type="radio"
+        onChange={handleCheckChange}
+        checked={showTable}
+        style={{ marginTop: "3px" }}
+      />
       <div className="order_ind_1_text">{item.orderID}</div>
       <i className={!showTable ? "fa fa-chevron-up" : "fa fa-chevron-down"}></i>
     </div>
@@ -48,7 +53,7 @@ const ShowItem = ({ item, index }) => {
     <div className="order_ind_3">
       <i className="fas fa-file-excel excel_icon"></i>
       <div className="order_ind_3_text">{item.excelId}</div>
-      <CSVLink data={data} headers={headers}>
+      <CSVLink data={data} headers={headers} style={{ color: "black" }}>
         <i className="fa fa-download download_icon" aria-hidden="true"></i>{" "}
       </CSVLink>
     </div>

@@ -3,6 +3,10 @@
 * {
   box-sizing: unset;
 }
+*:not(*) {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 0;
   padding: 0 0;
@@ -116,8 +120,8 @@ body {
 
 .dash_btn {
   background-color: rgb(109, 106, 124);
-  width: 170px;
-  height: 70px;
+  width: 200px;
+  height: 80px;
   /* margin: 10px; */
   margin: 10px 10px 0 10px;
   cursor: pointer;
@@ -172,7 +176,7 @@ body {
 }
 
 .body_header_f {
-  flex: 0.3;
+  flex: 0.35;
   /* border: 1px solid green; */
   margin: 0 30px;
 }
@@ -202,7 +206,6 @@ body {
   padding-top: 6px;
   border-right: 3px solid white;
 }
-
 .order_ind_3 {
   flex: 1;
   height: 40px;
@@ -213,6 +216,7 @@ body {
 
 .excel_icon {
   font-size: 37px;
+  color: green;
 }
 
 .order_ind_3_text {
