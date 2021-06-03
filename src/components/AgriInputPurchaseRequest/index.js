@@ -12,7 +12,7 @@ const AgriInputPurchaseRequest = () => {
   var components = [Pending, Executing, Executed, Completed];
 
   const handleClick = (e) => {
-    const val = e.target.innerHTML.toLowerCase();
+    const val = e.target.innerHTML;
     console.log(val);
     const newIdx = myViews.map((ele) => ele).indexOf(val);
     console.log(newIdx);
@@ -23,10 +23,13 @@ const AgriInputPurchaseRequest = () => {
     <div className="header_content">
       <div className="header_content_title">Agri-Input Master Maintenance</div>
       <div className="header_content_buttons">
-        <button onClick={handleClick}>Pending</button>
-        <button onClick={handleClick}>Executing</button>
-        <button onClick={handleClick}>Executed</button>
-        <button onClick={handleClick}>Completed</button>
+        {myViews.map((view, index) => {
+          return (
+            <button onClick={handleClick} key={index} className="dash_btn">
+              {view}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

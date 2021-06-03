@@ -1,11 +1,14 @@
 /* Body */
 
+* {
+  box-sizing: unset;
+}
 body {
   margin: 0 0;
   padding: 0 0;
 }
 
-.container {
+.mycontainer {
   display: flex;
 }
 
@@ -17,6 +20,7 @@ body {
   left: 0px;
   bottom: 0px;
   min-height: calc(100vh - 110px);
+  max-height: calc(100vh - 110px);
   top: 0px;
   z-index: 100;
   background-color: rgb(109, 106, 124);
@@ -92,19 +96,220 @@ body {
 .content {
   flex-grow: 1;
   padding: 20px;
+  overflow-y: scroll;
+  min-height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
 }
 
 .content_desc {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100%;
 }
 
 .header_content {
-  border: 1px solid blue;
 }
 .header_content_title {
-  border: 1px solid red;
   font-weight: bold;
   font-size: 20px;
   padding-bottom: 5px;
+}
+
+.dash_btn {
+  background-color: rgb(109, 106, 124);
+  width: 170px;
+  height: 70px;
+  /* margin: 10px; */
+  margin: 10px 10px 0 10px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.dash_btn:hover {
+  background-color: rgb(59, 57, 68);
+  transition: all 0.3s;
+}
+
+.header_content_buttons {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(59, 57, 68);
+}
+
+/* Executing Content Styles */
+
+.executing_desc {
+  /* border: 1px solid green; */
+  height: 87%;
+}
+
+.executing_header {
+  display: flex;
+  justify-content: center;
+}
+
+.executing_header_item {
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 17px;
+  border-radius: 9px;
+  background-color: rgb(109, 106, 124);
+  color: white;
+}
+
+/* Executing Body Stuff */
+
+.body_header {
+  display: flex;
+  /* border: 1px solid red; */
+  font-weight: bold;
+  border-bottom: 1px solid rgb(59, 57, 68);
+  padding-bottom: 5px;
+}
+
+.body_header_f {
+  flex: 0.3;
+  /* border: 1px solid green; */
+  margin: 0 30px;
+}
+
+.order_ind {
+  /* border: 1px solid red; */
+  display: flex;
+  background-color: rgb(188, 185, 204);
+  margin: 10px 5px;
+}
+
+.order_ind_1 {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-around;
+  padding-top: 22px;
+  border-right: 3px solid white;
+}
+
+.order_ind_2 {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  height: 100%;
+  padding-top: 6px;
+  border-right: 3px solid white;
+}
+
+.order_ind_3 {
+  flex: 1;
+  height: 40px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.excel_icon {
+  font-size: 37px;
+}
+
+.order_ind_3_text {
+  padding-top: 8px;
+}
+
+.download_icon {
+  padding-top: 4px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.order_ind_2_profile {
+  margin-left: 10px;
+}
+
+.order_ind_2_info {
+  margin-left: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info_name {
+  padding-top: 4px;
+  font-size: 17px;
+}
+.info_date {
+  /* margin-top: 5px; */
+  font-size: 13px;
+}
+
+.profile {
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/* Table Styles */
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* width: 100%; */
+  margin-left: 5px;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(odd) {
+  background-color: rgb(208, 205, 224);
+}
+table tr:nth-child(even) {
+  background-color: rgb(236, 235, 241);
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.table_link {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table_button:nth-child(odd) {
+  background-color: rgb(208, 205, 224);
+  outline: none;
+  color: black;
+  border: none;
+}
+.table_button:nth-child(even) {
+  background-color: rgb(236, 235, 241);
+  outline: none;
+  color: black;
+  border: none;
 }

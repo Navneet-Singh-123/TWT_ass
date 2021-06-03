@@ -3,7 +3,7 @@ import SidebarBottom from "./SidebarBottom";
 import SidebarTop from "./SidebarTop";
 const Sidebar = (props) => {
   return (
-    <div className="container">
+    <div className="mycontainer">
       <div className="sidebar">
         <div className="sidebar_content">
           <SidebarTop />
